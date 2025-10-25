@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
-import coffeeImage from '../../assets/coffee-shop.png'; // твоя картинка кофейни
-import beansImage from '../../assets/coffee-beans.png';
+import coffeeImage from './assets/coffee-shop.png';
+import beansImage from './assets/coffee-beans.png';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -88,3 +88,4 @@ const Login = () => {
 };
 
 export default Login;
+
