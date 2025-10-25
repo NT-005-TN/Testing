@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LoginBar.css';
-import coffeeImage from '../../assets/barista.png'; // твоя картинка кофейни
-import beansImage from '../../assets/coffee-beans.png';
+import baristaImage from "./assets/barista.png"; // твоя картинка кофейни
+import beansImage from './assets/coffee-beans.png';
 
 const LoginBar = () => {
   const [formData, setFormData] = useState({
@@ -82,5 +82,6 @@ const LoginBar = () => {
     </div>
   );
 };
+
 
 export default LoginBar;
