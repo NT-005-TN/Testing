@@ -1,0 +1,199 @@
+/* ======== Общие настройки ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Главный контейнер */
+.login-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #422515; /* чтобы правая часть имела свой фон */
+}
+
+/* Левая часть с фото */
+.login-left {
+  width: 61vw;              /* 40% экрана */
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Само изображение */
+.coffee-image {
+  position: fixed;          /* <=== КЛЮЧЕВОЙ момент */
+  top: 0;
+  left: 0;
+  width: 45vw;              /* то же, что у .login-left */
+  height: 100vh;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 0;
+}
+
+
+/* Правая часть (форма входа) */
+.login-right {
+  flex: 1;
+  background-color: #422515;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+/* Контейнер формы */
+.login-container {
+  background: #240a05;
+  padding: 6rem 6rem  ;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 590px;
+  color: white;
+  text-align: center;  /* выравниваем текст */
+  position: absolute;
+  left: -9%; /* уменьши, если хочешь ближе к фото */
+  transform: translateX(0);
+}
+
+/* ======== Заголовок ======== */
+.login-header h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.8rem;
+  color: #f3d5b5;
+  margin-bottom: 2rem;
+  font-family: "Pacifico";
+}
+
+.beans-image {
+  width: 100px;              /* регулируй размер */
+  height: auto;
+  display: block;
+  margin: 0 auto 1.1rem auto;  /* выравниваем по центру и добавляем отступ вниз */
+  border-radius: 50%;        /* если хочешь круглую форму */
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* лёгкая тень для объёма */
+}
+
+.login-header p {
+  font-size: 1.5rem;
+  color: #f5e6d3;
+  margin-bottom: 2rem;
+  font-family: 'Pacifico';
+}
+
+/* ======== Поля ввода ======== */
+.input-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  background-color: #6d3f30;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: #f5d9c3;
+}
+
+.input-group input:focus {
+  background-color: #976250;
+}
+
+/* ======== Ссылки под полями ======== */
+.form-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  color: #d6bba2;
+}
+
+.remember-me input {
+  accent-color: #d6bba2;
+}
+
+.forgot-password {
+  color: #d6bba2;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* ======== Кнопка входа ======== */
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #FFE9CF;
+  color: #646260;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(243, 213, 181, 0.4);
+}
+
+/* ======== Ссылка на регистрацию ======== */
+.register-link {
+  margin-top: 1.5rem;
+  color: #f5e6d3;
+  font-size: 1.2rem;
+  font-family: 'Pacifico'
+}
+
+.register-link a {
+  color: #f3d5b5;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ======== Адаптивность ======== */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .login-left {
+    height: 40vh;
+  }
+
+  .login-right {
+    height: 60vh;
+  }
+
+  .login-container {
+    width: 90%;
+  }
+}
